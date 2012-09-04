@@ -10,9 +10,12 @@ $sw = false;	//抽出対象行かどうかの判定スイッチ
 
 //ジャンルURLをまとめたtxtを読み込む
 $contents = @file('janis_genre.txt');
-
 //書き込み用のtextファイルを開く
 $fpw = fopen("janis_artist.html", "w");
+
+fwrite($fpw, '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>');
+
+
 foreach($contents as $line)
 {
 	$genreURL = str_replace(array("\r\n","\r","\n"),'',$line);
@@ -71,5 +74,6 @@ foreach($contents as $line)
 	    fclose($fp);
 	}
 }
+fwrite($fpw, '</body>');
 fclose($fpw);
 ?>
