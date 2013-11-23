@@ -13,7 +13,7 @@ $contents = @file('janis_genre.txt');
 //書き込み用のtextファイルを開く
 $fpw = fopen("janis_artist.html", "w");
 
-fwrite($fpw, '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>');
+fwrite($fpw, '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title >JANIS在庫ｱーﾃｨｽﾄ</title></head><body>');
 
 
 foreach($contents as $line)
