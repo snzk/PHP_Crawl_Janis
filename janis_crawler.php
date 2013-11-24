@@ -15,7 +15,6 @@ $fpw = fopen("janis_artist.html", "w");
 
 fwrite($fpw, '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title >JANIS在庫ｱーﾃｨｽﾄ</title></head><body>');
 
-
 foreach($contents as $line)
 {
 	$genreURL = str_replace(array("\r\n","\r","\n"),'',$line);
@@ -75,5 +74,6 @@ foreach($contents as $line)
 	}
 }
 fwrite($fpw, '</body>');
+/* 最後に書き込み用のテキストファイルを閉じる */
 fclose($fpw);
 ?>
